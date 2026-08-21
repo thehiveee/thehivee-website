@@ -221,32 +221,60 @@
       <div style="font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: #FFDE59; margin-bottom: 18px; font-weight: 700;">Get Started</div>
       <h2 style="font-family: 'Sora', sans-serif; font-size: 2rem; margin: 0;">Get a Free Quote</h2>
     </div>
-    <div style="max-width: 540px; margin: 0 auto; background: #1E1E1E; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 38px; transition: transform 0.2s ease, border-color 0.2s ease;" style-hover="transform: scale(1.015); border-color: #FFDE59;">
-      <form onSubmit="{{ onSubmit }}" style="display: flex; flex-direction: column; gap: 16px;">
-        <div>
-          <label for="name" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">Your Name</label>
-          <input type="text" id="name" name="name" required="required" style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
-        </div>
-        <div>
-          <label for="business" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">Business Name</label>
-          <input type="text" id="business" name="business" required="required" style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
-        </div>
-        <div>
-          <label for="phone" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">Phone</label>
-          <input type="tel" id="phone" name="phone" required="required" style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
-        </div>
-        <div>
-          <label for="email" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">Email</label>
-          <input type="email" id="email" name="email" required="required" style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
-        </div>
-        <div>
-          <label for="city" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">City</label>
-          <input type="text" id="city" name="city" required="required" style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
-        </div>
-        <button type="submit" style="width: 100%; background: #FFDE59; color: #141414; border: none; padding: 15px; border-radius: 6px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: background 0.2s ease, transform 0.2s ease;" style-hover="background: #FFD230; transform: scale(1.02);">{{ submitLabel }}</button>
-        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-          <div style="background: rgba(76,175,80,0.12); border: 1px solid rgba(76,175,80,0.35); color: #A8E6AC; padding: 14px 16px; border-radius: 8px; font-size: 0.9rem;">✅ Got it — we'll be in touch shortly to schedule your call.</div>
-        </sc-if>
+  <div style="max-width: 540px; margin: 0 auto; background: #1E1E1E; border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 38px;">
+  <form id="contactForm" style="display: flex; flex-direction: column; gap: 16px;">
+    <div>
+      <label for="name" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">Your Name</label>
+      <input type="text" id="name" name="name" required style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
+    </div>
+    <div>
+      <label for="business" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">Business Name</label>
+      <input type="text" id="business" name="business" required style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
+    </div>
+    <div>
+      <label for="phone" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">Phone</label>
+      <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
+    </div>
+    <div>
+      <label for="email" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">Email</label>
+      <input type="email" id="email" name="email" required style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
+    </div>
+    <div>
+      <label for="city" style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: #FFFFFF;">City</label>
+      <input type="text" id="city" name="city" required style="width: 100%; padding: 12px 13px; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; background: #141414; color: #FFFFFF; font-size: 0.95rem;">
+    </div>
+    <button type="submit" style="width: 100%; background: #FFDE59; color: #141414; border: none; padding: 15px; border-radius: 6px; font-weight: 700; font-size: 1rem; cursor: pointer;">Get My Free Quote</button>
+    <div id="confirmMsg" style="display:none; background: rgba(76,175,80,0.12); border: 1px solid rgba(76,175,80,0.35); color: #A8E6AC; padding: 14px 16px; border-radius: 8px; font-size: 0.9rem;">✅ Got it — we'll be in touch shortly to schedule your call.</div>
+  </form>
+</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const form = this;
+  const formData = new FormData(form);
+  formData.append('access_key', '862985ae-1f00-405a-b35d-3a4d075a27a4');
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (data.success) {
+        document.getElementById('confirmMsg').style.display = 'block';
+        form.querySelector('button[type="submit"]').textContent = 'Request Sent ✓';
+        form.reset();
+      } else {
+        alert('Something went wrong — please try again or email us directly.');
+      }
+    })
+    .catch(() => {
+      alert('Something went wrong — please try again or email us directly.');
+    });
+});
+</script>
       </form>
     </div>
   </section>
